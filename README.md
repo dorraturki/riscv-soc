@@ -12,3 +12,6 @@ This project implements a fully functional SoC featuring:
 - Peripheral components: ROM, RAM, UART, GPIO, and a coprocessor (COPRO)
 - Full RTL description in **VHDL**, simulatable out of the box with QuestaSim
 
+### System Architecture
+
+![System Architecture](/Diagrams/System_architecture.png)
