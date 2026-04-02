@@ -4,18 +4,18 @@ use ieee.numeric_std.all;
 
 entity RegBank is
    port(
-      --Contrôles
+      --Controls
       reset        : in  std_logic;
       clk          : in  std_logic;
       enable       : in  std_logic;
-      --Port d'écriture
+      --Write Ports
       wr           : in  std_logic;
       address_in   : in  std_logic_vector( 5-1 downto 0);
       data_in      : in  std_logic_vector(32-1 downto 0);
-      --Ports de lecture 1
+      --Read Port 1
       address_out1 : in  std_logic_vector( 5-1 downto 0);
       data_out1    : out std_logic_vector(32-1 downto 0);
-      --Ports de lecture 2
+      --Read Port 2
       address_out2 : in  std_logic_vector( 5-1 downto 0);
       data_out2    : out std_logic_vector(32-1 downto 0)
    );
