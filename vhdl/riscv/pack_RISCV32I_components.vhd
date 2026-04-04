@@ -23,6 +23,15 @@ package pack_RISCV32I_components is
          data_in      : in  std_logic_vector(32-1 downto 0)
       );
    end component;
+
+   component ALU
+      port(
+         op    : in  toperation;
+         a     : in  std_logic_vector(32-1 downto 0);
+         b     : in  std_logic_vector(32-1 downto 0);
+         c     : out std_logic_vector(32-1 downto 0)
+      );
+   end component;
       
 end package;
 
