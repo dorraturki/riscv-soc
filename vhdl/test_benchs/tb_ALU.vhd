@@ -6,15 +6,12 @@ library RISCV;
 use RISCV.pack_RISCV32I_types.all;
 use RISCV.pack_RISCV32I_components.all;
 
--- library RISCV_reference;
-
 entity tb_ALU is
 end entity;
 
 architecture a of tb_ALU is
 
    for DUT           : ALU use entity riscv.ALU(a);
- --  for DUT_reference : ALU use entity riscv_reference.ALU(a);
 
    signal op : toperation;
    signal a  : std_logic_vector(31 downto 0);
@@ -35,18 +32,6 @@ begin
          b  => b,
          c  => c
       );
-/* 
-   DUT_reference : ALU
-      port map(
-         op => op,
-         a  => a,
-         b  => b,
-         c  => c_reference
-      );
-
-   -- Drapeau de validation
-   c_ok <= (c = c_reference);
- */
 
    stim: process
    begin
