@@ -20,11 +20,11 @@ This project implements a fully functional SoC featuring:
  
 ### Running the simulation
  
-In [`/Modelsim/Sim Scripts/`](SimScripts/), there is `sim_module.do` scripts compiles all sources and starts the simulation automatically for each module. 
+In [`/Modelsim/Sim_Scripts/`](/Modelsim/Sim_Scripts/), there is `sim_module.do` scripts compiles all sources and starts the simulation automatically for each module. 
  
 ### Reference library (validation)
  
-The [`Modelsim/RISCV_reference/`](RISCV_reference/) directory contains a pre-compiled RISC-V reference library provided by a professor. It can be added to the simulation to cross-validate your design's outputs against a known-good implementation.
+The [`Modelsim/RISCV_reference/`](Modelsim/RISCV_reference/) directory contains a pre-compiled RISC-V reference library provided by a professor. It can be added to the simulation to cross-validate your design's outputs against a known-good implementation.
  
 To include it, map it in ModelSim before running:
  
