@@ -15,3 +15,22 @@ This project implements a fully functional SoC featuring:
 ### System Architecture
 
 ![System Architecture](/Diagrams/System_architecture.png)
+
+## Simulation
+ 
+### Running the simulation
+ 
+In `/Modelsim/Sim Scripts/`, there is `sim_module.do` scripts compiles all sources and starts the simulation automatically for each module. 
+ 
+### Reference library (validation)
+ 
+The `Modelsim/RISCV_reference/` directory contains a pre-compiled RISC-V reference library provided by a professor. It can be added to the simulation to cross-validate your design's outputs against a known-good implementation.
+ 
+To include it, map it in ModelSim before running:
+ 
+```tcl
+vmap RISCV_reference modelsim/RISCV_reference
+``` 
+### Simulation results
+ 
+Screenshots of the simulation waveforms are available in the [`Simulation/`](Simulation/) folder, showing expected signal behaviour for key test cases.
