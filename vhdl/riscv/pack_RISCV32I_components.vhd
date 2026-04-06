@@ -32,6 +32,30 @@ package pack_RISCV32I_components is
          c     : out std_logic_vector(32-1 downto 0)
       );
    end component;
-      
+
+   component BE_generator
+      port(
+         inst    : in  std_logic_vector(32-1 downto 0);
+         address : in  std_logic_vector( 2-1 downto 0);
+         BE      : out std_logic_vector( 4-1 downto 0)
+      );
+   end component;
+
+      port(
+         inst     : in  std_logic_vector(32-1 downto 0);
+         BE       : in  std_logic_vector( 4-1 downto 0);
+         data_in  : in  std_logic_vector(32-1 downto 0);
+         data_out : out std_logic_vector(32-1 downto 0)
+      );
+   end component;
+
+   component output_data_manager
+      port(
+         inst     : in  std_logic_vector(32-1 downto 0);
+         data_in  : in  std_logic_vector(32-1 downto 0);
+         data_out : out std_logic_vector(32-1 downto 0)
+      );
+   end component;
+
 end package;
 
