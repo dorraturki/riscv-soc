@@ -1,0 +1,319 @@
+m255
+K4
+z2
+!s11e vcom 2021.1 2021.01, Jan 19 2021
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dF:/2021-2022/3AGE2/BE1_GR2/modelsim
+Ealu
+Z0 DPx5 riscv 19 pack_riscv32i_types 0 22 OQCZRiZXDdiehz<i4Ooh=2
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z4 OL;C;2021.1;73
+32
+Z5 !s110 1758968999
+!i10b 1
+Z6 w1664444708
+!i122 43
+Z7 dJ:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/modelsim
+Z8 8J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/ALU.vhd
+Z9 FJ:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/ALU.vhd
+l0
+L8 1
+VjmnG_IF`9=6kbSh_=KX^h2
+!s100 oVc3k1@Mjb22Q>C@oYgb[2
+Z10 !s108 1758968999.000000
+Z11 !s90 -reportprogress|300|-work|RISCV_reference|-2002|-explicit|-vopt|-stats=none|J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/ALU.vhd|
+Z12 !s107 J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/ALU.vhd|
+!i113 0
+Z13 o-work RISCV_reference -2002 -explicit
+Z14 tExplicit 1 CvgOpt 0
+Aa
+R0
+R1
+R2
+R3
+DEx4 work 3 alu 0 22 jmnG_IF`9=6kbSh_=KX^h2
+R4
+32
+R5
+!i10b 1
+!i122 43
+l20
+L17 48
+VIBL6W4_bfc@N[RW8k?dmE1
+!s100 gi4UVaf9UT:;G`UGim``i1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Ebe_generator
+R0
+R2
+R3
+R4
+32
+R5
+!i10b 1
+Z15 w1758353084
+!i122 44
+R7
+Z16 8J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/BE_generator.vhd
+Z17 FJ:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/BE_generator.vhd
+l0
+L7 1
+VlB?7<W]RY0@2JG?Dj8^Y=2
+!s100 9i=:[QH[iNLl:Doa2L9lf2
+R10
+Z18 !s90 -reportprogress|300|-work|RISCV_reference|-2002|-explicit|-vopt|-stats=none|J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/BE_generator.vhd|
+Z19 !s107 J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/BE_generator.vhd|
+!i113 0
+R13
+R14
+Aa
+R0
+R2
+R3
+DEx4 work 12 be_generator 0 22 lB?7<W]RY0@2JG?Dj8^Y=2
+R4
+32
+R5
+!i10b 1
+!i122 44
+l20
+L15 76
+VRH?HYPmIY9_XSWlgof@an1
+!s100 XNM=OW;7GHk6I;D<o]TSz0
+R10
+R18
+R19
+!i113 0
+R13
+R14
+Econtroller
+R0
+R1
+R2
+R3
+R4
+32
+Z20 !s110 1758969000
+!i10b 1
+Z21 w1758906780
+!i122 48
+R7
+Z22 8J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/controller.vhd
+Z23 FJ:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/controller.vhd
+l0
+L8 1
+VQkU:l3ohk9@T@M9bi;0l@0
+!s100 W93DIP<SO7jV<dLNa0odI0
+Z24 !s108 1758969000.000000
+Z25 !s90 -reportprogress|300|-work|RISCV_reference|-2002|-explicit|-vopt|-stats=none|J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/controller.vhd|
+Z26 !s107 J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/controller.vhd|
+!i113 0
+R13
+R14
+Aa
+R0
+R1
+R2
+R3
+DEx4 work 10 controller 0 22 QkU:l3ohk9@T@M9bi;0l@0
+R4
+32
+R20
+!i10b 1
+!i122 48
+l31
+L25 151
+VX^=^^<U`aFCC4PfzfT5>d1
+!s100 HG>iRkU[ZAf[X[?W=80>U2
+R24
+R25
+R26
+!i113 0
+R13
+R14
+Edecoder
+R1
+R2
+R3
+R4
+32
+R20
+!i10b 1
+Z27 w1758968922
+!i122 47
+R7
+Z28 8J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/decoder.vhd
+Z29 FJ:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/decoder.vhd
+l0
+L5 1
+VPd5HVN3PU9eOQHCOfi]e]0
+!s100 ;FI;kf=P;8B`ZDWzKF<NB2
+R24
+Z30 !s90 -reportprogress|300|-work|RISCV_reference|-2002|-explicit|-vopt|-stats=none|J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/decoder.vhd|
+Z31 !s107 J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/decoder.vhd|
+!i113 0
+R13
+R14
+Aa
+R1
+R2
+R3
+DEx4 work 7 decoder 0 22 Pd5HVN3PU9eOQHCOfi]e]0
+R4
+32
+R20
+!i10b 1
+!i122 47
+l21
+L19 21
+V_;Ac6kC6=oaZG_<gR2kO`0
+!s100 ?XnH71[gacF36DN?CmC?@2
+R24
+R30
+R31
+!i113 0
+R13
+R14
+Einput_data_manager
+R0
+R1
+R2
+R3
+R4
+32
+R5
+!i10b 1
+Z32 w1758358593
+!i122 45
+R7
+Z33 8J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/input_data_manager.vhd
+Z34 FJ:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/input_data_manager.vhd
+l0
+L8 1
+VOUe@Y:9=4MBL3aQfSC_hn3
+!s100 OBlNPEWP2<B5e[J[V8MAo1
+R10
+Z35 !s90 -reportprogress|300|-work|RISCV_reference|-2002|-explicit|-vopt|-stats=none|J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/input_data_manager.vhd|
+Z36 !s107 J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/input_data_manager.vhd|
+!i113 0
+R13
+R14
+Aa
+R0
+R1
+R2
+R3
+DEx4 work 18 input_data_manager 0 22 OUe@Y:9=4MBL3aQfSC_hn3
+R4
+32
+R5
+!i10b 1
+!i122 45
+l21
+L17 45
+V45_:1mYhEU@a815`W67j20
+!s100 dTXh6I<El@A]lZ@EiG]6Z0
+R10
+R35
+R36
+!i113 0
+R13
+R14
+Eoutput_data_manager
+R0
+R2
+R3
+R4
+32
+R5
+!i10b 1
+Z37 w1758358067
+!i122 46
+R7
+Z38 8J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/output_data_manager.vhd
+Z39 FJ:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/output_data_manager.vhd
+l0
+L7 1
+VkAnQi1dT0[1mXkI2G5P7f1
+!s100 CTol[UeBiNXFMn3HTmj@i2
+R10
+Z40 !s90 -reportprogress|300|-work|RISCV_reference|-2002|-explicit|-vopt|-stats=none|J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/output_data_manager.vhd|
+Z41 !s107 J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/output_data_manager.vhd|
+!i113 0
+R13
+R14
+Aa
+R0
+R2
+R3
+DEx4 work 19 output_data_manager 0 22 kAnQi1dT0[1mXkI2G5P7f1
+R4
+32
+R5
+!i10b 1
+!i122 46
+l19
+L15 25
+V_hI_0zB>31R6?3Z_9MW`a1
+!s100 ZPaX9hDeJ4PC6YH]3nznh2
+R10
+R40
+R41
+!i113 0
+R13
+R14
+Eregbank
+R1
+R2
+R3
+R4
+32
+R5
+!i10b 1
+Z42 w1757499511
+!i122 42
+R7
+Z43 8J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/RegBank.vhd
+Z44 FJ:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/RegBank.vhd
+l0
+L5 1
+Vi1VYN:Ie=6M3hQfm`2dUc0
+!s100 0iaQ8kP6d?l5S9::oW9l83
+R10
+Z45 !s90 -reportprogress|300|-work|RISCV_reference|-2002|-explicit|-vopt|-stats=none|J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/RegBank.vhd|
+Z46 !s107 J:/2025-2026/3age2/BE1/Pour_les_enseignants/BE1/seance4/vhdl_reference/riscv/RegBank.vhd|
+!i113 0
+R13
+R14
+Aa
+R1
+R2
+R3
+DEx4 work 7 regbank 0 22 i1VYN:Ie=6M3hQfm`2dUc0
+R4
+32
+R5
+!i10b 1
+!i122 42
+l30
+L24 27
+V@26S??=1C=^ID[9f0RQl03
+!s100 4Odn6oCQTj@J6A_i=ZF0:1
+R10
+R45
+R46
+!i113 0
+R13
+R14
