@@ -20,7 +20,9 @@ This project implements a fully functional SoC featuring:
  
 ### Running the simulation
  
-In [`/Modelsim/Sim_Scripts/`](/Modelsim/Sim_Scripts/), there is `sim_module.do` scripts compiles all sources and starts the simulation automatically for each module. 
+In [`/Modelsim/Sim_Scripts/`](/Modelsim/Sim_Scripts/), there is `sim_[module].do` scripts compiles all sources and starts the simulation automatically for each module. 
+Compile the files in the riscv folder in the library RISCV.
+Compile the files in the soc folder in the library SOC.
  
 ### Reference library (validation)
  
