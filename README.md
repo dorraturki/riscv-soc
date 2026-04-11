@@ -23,6 +23,7 @@ This project implements a fully functional SoC featuring:
 In [`/Modelsim/Sim_Scripts/`](/Modelsim/Sim_Scripts/), there is `sim_[module].do` scripts compiles all sources and starts the simulation automatically for each module. 
 Compile the files in the riscv folder in the library RISCV.
 Compile the files in the soc folder in the library SOC.
+Compile using VHDL 2008.
  
 ### Reference library (validation)
  
