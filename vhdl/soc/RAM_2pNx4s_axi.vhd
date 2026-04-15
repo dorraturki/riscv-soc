@@ -60,7 +60,7 @@ architecture a of RAM_2pNx4s_axi is
 
 begin
 
-   --Registre d'adresses
+   --Addresse register
    process(clk)
    begin
       if rising_edge(clk)
@@ -71,7 +71,7 @@ begin
       end if;
    end process;
 
-   --Registres d'état des FSMs
+   --FSM registers
    process(clk)
    begin
       if rising_edge(clk)
@@ -82,77 +82,77 @@ begin
       end if;
    end process;
 
-   --FSM lecture
+   --FSM read
 		process(pstateR, ARvalid, ARready, Rvalid, Rready)
 		begin
-		   -- Sorties par défaut
+		   -- Default outputs
 		   ARready <= '0';
 		   Rvalid  <= '0';
 		   
-		   -- Mise à jour des sorties selon l'état
+		   -- Update outputs
 		   case pstateR is
 		   
-			  when S0 => -- Initialisation
+			  when S0 => -- Initialization
 						 fstateR <= S1;
 			  
-			  when S1 => -- Attente et réception demande lecture
+			  when S1 => -- Wait for reading request
 						 ARready <= '1';
 						 if (ARvalid = '1')
-							then -- Demande reçue
+							then -- request arrived
 								 fstateR <= S2;
-							else -- Attente
+							else -- Wait
 								 fstateR <= S1;
 						 end if;
 			  
-			  when S2 => -- Envoi donnée
+			  when S2 => -- Send data
 						 Rvalid <= '1';
 						 if (Rready = '1')
-							then -- Donnée envoyée => transaction terminée
+							then --Data sent => transaction finished
 								 fstateR <= S1;
-							else -- Attente
+							else -- Wait
 								 fstateR <= S2;
 						 end if;
 		   
 		   end case;
 		end process;   
-   --FSM écriture
+   --FSM writing
 		process(pstateW, AWvalid, AWready, Wvalid, Wready, Bvalid, Bready)
 		begin
-		   -- Sorties par défaut
+		   -- Default outputs
 		   AWready <= '0';
 		   Wready  <= '0';
 		   Bvalid  <= '0';
 		   
-		   -- Mise à jour des sorties selon l'état
+		   -- Update outputs
 		   case pstateW is
 		   
-			  when S0 => -- Initialisation
+			  when S0 => -- Initialization
 						 fstateW <= S1;
 			  
-			  when S1 => -- Attente et réception demande écriture
+			  when S1 => -- Wait for request
 						 AWready <= '1';
 						 if (AWvalid = '1')
-							then -- Demande reçue
+							then -- Request arrived
 								 fstateW <= S2;
-							else -- Attente
+							else -- Wait
 								 fstateW <= S1;
 						 end if;
 			  
-			  when S2 => -- Réception donnée
+			  when S2 => -- Data reception
 						 Wready <= '1';
 						 if (Wvalid = '1')
-							then -- Donnée reçue
+							then -- Data received
 								 fstateW <= S3;
-							else -- Attente
+							else -- Wait
 								 fstateW <= S2;
 						 end if;
 			  
-			  when S3 => -- Envoi réponse
+			  when S3 => -- Sending response
 						 Bvalid <= '1';
 						 if (Bready = '1')
-							then -- Réponse envoyée => transaction terminée
+							then -- Response sent => transaction finished
 								 fstateW <= S1;
-							else -- Attente
+							else -- Wait
 								 fstateW <= S3;
 						 end if;
 		   
@@ -180,10 +180,10 @@ begin
       data_out => Rpayld.data
    );
    
-   --Réponse en lecture
+   --Response in reading
    Rpayld.resp <= "00";
 
-   --Réponse en écriture
+   --Response in writing
    Bpayld.resp <= "00";
    
 end a;
