@@ -62,8 +62,8 @@ architecture a of uart_axi is
 begin
 
 
---Réception
-   --FSM lecture
+--Reception
+   --FSM reading
    process(clk)
    begin
       if rising_edge(clk)
@@ -76,31 +76,31 @@ begin
    
    process(pstateR,ARvalid,Rready)
    begin
-      --Sorties par défaut
+      --Default
       ARready <= '0';
       Rvalid  <= '0';
       
-      --Mise à jour des sorties par défaut
+      --Default output updates
       case pstateR is
 
-         when S0 => --Initialisation
+         when S0 => --Initialization
                     fstateR <= S1;
 
-         when S1 => --Attente d'une demande de lecture
+         when S1 => --Wait for reading request
                     ARready <= '1';
                     if (ARvalid='1')
-                       then --Demande prise en compte
+                       then --request received
                             fstateR <= S2;
-                       else --Attente  
+                       else --Wait
                             fstateR <= S1;
                     end if;  
 
-         when S2 => --Attente de transfert de la donnée
+         when S2 => --Wait for sending data
                     Rvalid <= '1';
                     if (Rready='1')
-                       then --Transfert terminé   
+                       then --Data sent
                             fstateR <= S1;
-                       else --Attente 
+                       else --Wait 
                             fstateR <= S2;
                     end if;  
 
@@ -130,7 +130,7 @@ begin
    end generate;
 
 --Transmission
-   --FSM écriture
+   --FSM writing
    process(clk)
    begin
       if rising_edge(clk)
@@ -143,41 +143,41 @@ begin
 
    process(pstateW,AWvalid,Wvalid,Bready)
    begin
-      --Sorties par défaut
+      --Default outputs
       AWready     <= '0';
       Wready      <= '0';
       Bvalid      <= '0';
       
-      --Mise à jour des sorties par défaut
+      -- Update default outputs
       case pstateW is
 
-         when S0 => --Initialisation
+         when S0 => --Initialization
                     fstateW <= S1;
 
-         when S1 => --Attente d'une demande d'écriture
+         when S1 => --Wait for writing request
                     AWready <= '1';
                     if (AWvalid='1')
-                       then --Demande prise en compte
+                       then --Request received
                             fstateW <= S2;
-                       else --Attente  
+                       else --Wait  
                             fstateW <= S1;
                     end if;  
 
-         when S2 => --Attente de transfert de la donnée
+         when S2 => --Wait for data transfert
                     Wready <= '1';
                     if (Wvalid='1')
-                       then --Transfert terminé   
+                       then --Transfert done   
                             fstateW   <= S3;
-                       else --Attente 
+                       else --Wait 
                             fstateW <= S2;
                     end if;  
 
-         when S3 => --Attente de transfert de la réponse
+         when S3 => --Wait for reqponse transfert
                     Bvalid <= '1';
                     if (Bready='1')
-                       then --Transfert terminé   
+                       then --Transfert done   
                             fstateW   <= S1;
-                       else --Attente 
+                       else --Wait 
                             fstateW <= S3;
                     end if;  
 
