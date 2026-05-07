@@ -62,7 +62,7 @@ architecture a of copro_axi is
 begin
 
 
---Réception
+--Reception
    --FSM lecture
    process(clk)
    begin
@@ -76,41 +76,38 @@ begin
    
    process(pstateR,ARvalid,Rready)
    begin
-      --Sorties par défaut
+      
       ARready <= '0';
       Rvalid  <= '0';
       
-      --Mise à jour des sorties par défaut
+     
       case pstateR is
 
-         when S0 => --Initialisation
+         when S0 => 
                     fstateR <= S1;
 
-         when S1 => --Attente d'une demande de lecture
+         when S1 => 
                     ARready <= '1';
                     if (ARvalid='1')
-                       then --Demande prise en compte
+                       then 
                             fstateR <= S2;
-                       else --Attente  
+                       else   
                             fstateR <= S1;
                     end if;  
 
-         when S2 => --Attente de transfert de la donnée
+         when S2 => 
                     Rvalid <= '1';
                     if (Rready='1')
-                       then --Transfert terminé   
+                       then  
                             fstateR <= S1;
-                       else --Attente 
+                       else 
                             fstateR <= S2;
                     end if;  
 
       end case;
    end process;
    
-   --à compléter
-
 --Transmission
-   --FSM écriture
    process(clk)
    begin
       if rising_edge(clk)
@@ -123,41 +120,39 @@ begin
 
    process(pstateW,AWvalid,Wvalid,Bready)
    begin
-      --Sorties par défaut
       AWready     <= '0';
       Wready      <= '0';
       Bvalid      <= '0';
       
-      --Mise à jour des sorties par défaut
       case pstateW is
 
-         when S0 => --Initialisation
+         when S0 => 
                     fstateW <= S1;
 
-         when S1 => --Attente d'une demande d'écriture
+         when S1 => 
                     AWready <= '1';
                     if (AWvalid='1')
-                       then --Demande prise en compte
+                       then
                             fstateW <= S2;
-                       else --Attente  
+                       else
                             fstateW <= S1;
                     end if;  
 
-         when S2 => --Attente de transfert de la donnée
+         when S2 => 
                     Wready <= '1';
                     if (Wvalid='1')
-                       then --Transfert terminé   
+                       then 
                             fstateW   <= S3;
-                       else --Attente 
+                       else
                             fstateW <= S2;
                     end if;  
 
-         when S3 => --Attente de transfert de la réponse
+         when S3 => 
                     Bvalid <= '1';
                     if (Bready='1')
-                       then --Transfert terminé   
+                       then    
                             fstateW   <= S1;
-                       else --Attente 
+                       else 
                             fstateW <= S3;
                     end if;  
 
